@@ -1,0 +1,63 @@
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+<div id="login" class="container">
+  <div class="row-fluid">
+    <div class="span12">
+      <div class="login well well-small">
+        <div class="center">
+        <%= image_tag "expense-256.png", class: "cba", alt: "logo" %>
+        </div>
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name), class: "login-form") do |f| %>
+          <div class="control-group">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-user"></i></span>
+              <%= f.email_field :email, autofocus: true, maxlength: "255", type: "text", id: "UserUsername" %>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <div class="input-prepend">
+              <span class="add-on"><i class="icon-lock"></i></span>
+              <%= f.password_field :password, autocomplete: "off", placeholder: "Password", type: "password", id: "UserPassword" %>
+            </div>
+          </div>
+         
+          <div class="control-group">
+            <%= f.submit "Log in", class: "btn btn-primary btn-large btn-block abc", type: "submit" %>
+          </div>
+          <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+            <%= link_to "Sign up", new_registration_path(resource_name), class: "btn-primary" %><br />
+          <% end -%>
+          <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+            <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn-primary" %><br />
+          <% end -%>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  #login img{
+    margin: 10px 0;
+  }
+  #login .center {
+    text-align: center;
+  }
+
+  #login .login {
+    max-width: 300px;
+    margin: 35px auto;
+  }
+
+  #login .login-form{
+    padding:0px 25px;
+  }
+  .control-group{
+    margin-left: 29px;
+  }
+  .abc{
+    margin-left: -13px;
+  }
+  .cba{
+    max-width: 67%;
+  }
+</style>

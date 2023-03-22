@@ -1,0 +1,74 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.summary > p {
+  font-size: 1.2rem;
+}
+
+.green {
+  color: green;
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+  font-weight: bold;
+}
+
+.badge{
+  font-size: 1rem !important;
+  color: #fff;
+  padding: 8px 12px !important;
+}
+
+
+// a:not(.title-link) {
+//   background-color: #6BBAEC;
+//   color: white;
+//   /*font-weight: bold;*/
+//   text-decoration: none;
+//   padding: 4px;
+//   padding-left: 6px;
+//   padding-right: 6px;
+//   // margin-top: 5px;
+//   // margin-bottom: 5px;
+//   line-height: 1.2rem;
+// }
+
+// a:not(.title-link):hover {
+//   color: #6BBAEC;
+//   background-color: hsl(202, 80%, 95%);
+//   transition: all 200ms;
+// }
+
+li {
+  margin-bottom: 10px;
+}
+
+.settle-up {
+  color: #89CE94 !important;
+  background-color: hsl(129, 42%, 99%) !important;
+  border: 1px solid #89CE94 !important;
+  font-size:.8rem !important;
+  margin-left: 20px;
+  padding-bottom: 6px;
+}
+
+.tables {
+  table {
+    border-collapse: collapse;
+    min-width: 50%
+  }
+
+  td, th {
+  border: 1px solid #999;
+  padding: 0.5rem;
+  text-align: left;
+  }
+
+  .table-link {
+    color: #6BBAEC;
+    // font-weight: bold;
+    background-color: white;
+  }
+}
